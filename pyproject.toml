@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77.0.3", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "actionbox-sdk"
+version = "0.2.1"
+description = "Python client for Actionbox durable human decisions"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["httpx>=0.27"]
+
+[project.optional-dependencies]
+crypto = ["cryptography>=42.0.0"]
+
+[project.urls]
+Source = "https://github.com/ActionBox-Cloud/actionbox-python"
+Issues = "https://github.com/ActionBox-Cloud/actionbox-python/issues"
+Documentation = "https://actionbox.cloud/docs"
+API = "https://api.actionbox.cloud/docs"
+
+[tool.setuptools]
+include-package-data = false
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["actionbox*"]
+exclude = ["tests*"]

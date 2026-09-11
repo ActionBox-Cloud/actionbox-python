@@ -1,0 +1,33 @@
+{
+  "receipt": "eyJhbGciOiJFZERTQSIsImtpZCI6InByaW1hcnkiLCJ0eXAiOiJhY3Rpb25ib3gtZGVjaXNpb24tcmVjZWlwdCIsInYiOjF9.eyJhY3Rpb25faWQiOiJhY3RfY29udHJhY3RfZml4dHVyZSIsImFjdGlvbl92ZXJzaW9uIjo3LCJlbnZpcm9ubWVudCI6ImxpdmUiLCJmaW5nZXJwcmludCI6InNoYTI1NjphYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhIiwiaXNzIjoiYWN0aW9uYm94Iiwib3B0aW9uX2lkIjoiYXBwcm92ZSIsInJlYXNvbiI6ImNvbnRyYWN0IGZpeHR1cmUiLCJyZWNlaXB0X3ZlcnNpb24iOjEsInJlc29sdmVkX2F0IjoiMjAyNi0wOC0zMFQxMjowMDowMCswMDowMCIsInJlc29sdmVkX2J5IjoidXNyX2ZpeHR1cmUiLCJyZXNwb25zZSI6eyJ0eXBlIjoic2luZ2xlX2Nob2ljZSIsInZhbHVlIjoiYXBwcm92ZSJ9LCJzdGF0dXMiOiJyZXNvbHZlZCIsInZlcnNpb24iOjd9.A897IgEL8mOCuob6bpPETtNKW3RhA0E0YGY1unb_frnrYrrXDJ15hcV9iyQ4oeuymYPfa_hV6Tc1E7Gzfy3CAw",
+  "jwks": {
+    "keys": [
+      {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "kid": "primary",
+        "use": "sig",
+        "alg": "EdDSA",
+        "x": "HbXHc-fSdwv9DI_zErOav-ajhHHpU8A7EUjo0e-oUuQ"
+      }
+    ]
+  },
+  "claims": {
+    "iss": "actionbox",
+    "receipt_version": 1,
+    "action_id": "act_contract_fixture",
+    "environment": "live",
+    "version": 7,
+    "action_version": 7,
+    "fingerprint": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "status": "resolved",
+    "option_id": "approve",
+    "response": {
+      "type": "single_choice",
+      "value": "approve"
+    },
+    "reason": "contract fixture",
+    "resolved_at": "2026-08-30T12:00:00+00:00",
+    "resolved_by": "usr_fixture"
+  }
+}

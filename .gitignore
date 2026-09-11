@@ -1,0 +1,12 @@
+node_modules/
+dist/
+build/
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.env
+.env.*
+.DS_Store
+/actionbox.exe
+/actionbox_pkg/bin/

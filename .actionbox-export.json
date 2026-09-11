@@ -1,0 +1,23 @@
+{
+  "files": {
+    ".github/CODEOWNERS": "173fa777d25488c5fa0076709c348871cef12c00bb826bb5ff096c72328b3b35",
+    ".github/ISSUE_TEMPLATE/config.yml": "e20ffe109628211232b4addbac7244816a7a2dfd7a6b4bb413e8469f4cfdeb87",
+    ".github/dependabot.yml": "c270cc5fe59835154593bd210a5c006b5c33de5297163b6362c6e45e69d0b26e",
+    ".github/pull_request_template.md": "9ee0bcfd515f04463fc0a03e35fa3ea1b94c603e54df495b14979f50db8c1a4c",
+    ".github/workflows/ci.yml": "cb98c2fe2dd8517502549144c380bdc35111e7a547d369f127a0102388d2e9b4",
+    ".gitignore": "da68cd71fed314a7f157f38f8e369e8e9e6157f11819854c22eceeb2db1a10d3",
+    "CONTRIBUTING.md": "0eaf1d6e23cc6349b451500f47915cf02ffba0cfe1057766d585dc28fcc4a818",
+    "LICENSE": "f7eb6ff06d9165744040588157880a7410cc6aa50e80d1923376a84b9492a043",
+    "MANIFEST.in": "5e4e5e4bfbba906cab2929885e9f7f20f76a99a601b08e6a0c3954baf45ee627",
+    "README.md": "f3be23a21922702844739e94da1f7bf87347cce57caa2d573630605fd9e5b6a1",
+    "SECURITY.md": "307ba51f4d32cf505b01bc748736a82983c38b8e487bf5f4ed54d8277deb015f",
+    "actionbox/__init__.py": "711150022331294f99eab4b1acccada3f3d5acf50a25239faaf156c0fb7a0567",
+    "pyproject.toml": "f03dfe442d9d584ca09168d01e21c4d9de955c13a7bf1c7cd2955b6f30f015b8",
+    "tests/fixtures/decision-receipt-v1.json": "98f617f2e4eaec8203c1d402ab31a60df6c287787473c24e92bf7d997b3a9a17",
+    "tests/fixtures/decision-receipt-v2.json": "7c9951b8d5acda57f92044e34287b009422d6da2e62b6d32585af56e58ae0e17",
+    "tests/test_client.py": "988a11bb1f5f3073250f1f5093f9f7808a97db4e288e1d2ac0224821545cf4ec",
+    "tests/test_receipt_verifier.py": "a0850f6c4fee2a3782f692492b6fe4c396aec45b983f907ca1b65ba0ecb3644f",
+    "uv.lock": "fd2e6770f7e3e5e2e626e21005f2f9c827292b6469c8d492f2e78fe6eb13bc36"
+  },
+  "schema": 1
+}
