@@ -120,11 +120,17 @@ action = client.create(
         reversibility="reversible",
         rollback_plan="Restore the previous image.",
     ),
+    context_request_mode="poll",
 )
 ```
 
 The generic, refund, database-change, and access-request helpers emit this same
 wire shape; they do not create server-side template types.
+
+Set `context_request_mode="poll"` only when the integration monitors Action
+updates and can respond. Use `"callback"` with a `callback_url` when the
+webhook handler supports `action.context_requested`; the default
+`"unsupported"` mode hides the follow-up control for static scripts.
 
 If `action.context_request` is present, a reviewer has asked the Source for
 more detail. Update the same Action rather than creating another one:

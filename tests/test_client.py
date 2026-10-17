@@ -109,6 +109,7 @@ class ActionboxClientTests(unittest.TestCase):
                 }
             ],
             "decision_context": {"schema_version": 1, "risk_level": "high"},
+            "context_request_mode": "poll",
             "future_server_field": {"safe": True},
         }
         client = self.client(
@@ -120,6 +121,7 @@ class ActionboxClientTests(unittest.TestCase):
         self.assertEqual(action.action_version, 3)
         self.assertEqual(action.fingerprint, "sha256:bound")
         self.assertEqual(action.data["context"][0]["content"], "Proposed change: Deploy 2.18.0.")
+        self.assertEqual(action.context_request_mode, "poll")
         self.assertEqual(action.data["future_server_field"], {"safe": True})
 
     def test_source_sees_context_request_and_updates_the_same_action(self) -> None:
@@ -208,8 +210,13 @@ class ActionboxClientTests(unittest.TestCase):
             return httpx.Response(201, json={"data": {"id": "act_1", "status": "open"}})
 
         client = self.client(httpx.MockTransport(handler))
-        client.create(title="Review", assignee_email="reviewer@example.com")
+        client.create(
+            title="Review",
+            assignee_email="reviewer@example.com",
+            context_request_mode="poll",
+        )
         self.assertEqual(captured[0]["assignee_email"], "reviewer@example.com")
+        self.assertEqual(captured[0]["context_request_mode"], "poll")
 
     def test_create_accepts_restricted_reviewer_list(self) -> None:
         captured: list[dict] = []

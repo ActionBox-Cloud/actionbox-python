@@ -334,6 +334,7 @@ class ActionCreateInput(TypedDict):
 
     title: str
     chat_delivery: NotRequired[Literal["inherit", "disabled"]]
+    context_request_mode: NotRequired[Literal["unsupported", "poll", "callback"]]
     description: NotRequired[str]
     priority: NotRequired[Literal["low", "normal", "high", "urgent"]]
     open_url: NotRequired[str]
@@ -387,6 +388,7 @@ class ActionContextRequest(TypedDict, total=False):
 _ACTION_CREATE_EXTRA_FIELDS = frozenset(
     {
         "chat_delivery",
+        "context_request_mode",
         "priority",
         "open_url",
         "dedupe_key",
@@ -788,6 +790,17 @@ class Action:
     @property
     def context_request(self) -> ActionContextRequest | None:
         return cast(ActionContextRequest | None, self.data.get("context_request"))
+
+    @property
+    def context_request_mode(self) -> Literal["unsupported", "poll", "callback"]:
+        value = self.data.get("context_request_mode", "unsupported")
+        if value not in {"unsupported", "poll", "callback"}:
+            raise ActionboxError(
+                f"Actionbox returned an unsupported context request mode: {value!r}.",
+                "INVALID_RESPONSE",
+                200,
+            )
+        return cast(Literal["unsupported", "poll", "callback"], value)
 
     @property
     def decision(self) -> str | None:
